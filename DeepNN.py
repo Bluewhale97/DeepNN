@@ -1,4 +1,4 @@
-```python
+
 import time
 import numpy as np
 import h5py
@@ -251,6 +251,5 @@ my_predicted_image = predict(my_image, my_label_y, parameters)
 
 plt.imshow(image)
 print ("y = " + str(np.squeeze(my_predicted_image)) + ", your L-layer model predicts a \"" + classes[int(np.squeeze(my_predicted_image)),].decode("utf-8") +  "\" picture.")
-  
-```
+ 
   
