@@ -20,12 +20,12 @@ np.random.seed(1)
 
 train_x_orig, train_y, test_x_orig, test_y, classes = load_data()
 
-# Example of a picture
+#Example of a picture
 index = 10
 plt.imshow(train_x_orig[index])
 print ("y = " + str(train_y[0, index]) + ". It's a " + classes[train_y[0, index]].decode("utf-8") + " picture.")
 
-# Explore your dataset 
+#Explore your dataset 
 m_train = train_x_orig.shape[0]
 num_px = train_x_orig.shape[1]
 m_test = test_x_orig.shape[0]
@@ -37,8 +37,6 @@ print ("train_x_orig shape: " + str(train_x_orig.shape))
 print ("train_y shape: " + str(train_y.shape))
 print ("test_x_orig shape: " + str(test_x_orig.shape))
 print ("test_y shape: " + str(test_y.shape))
-
-```
 
 #Reshape the training and test examples 
 train_x_flatten = train_x_orig.reshape(train_x_orig.shape[0], -1).T   # The "-1" makes reshape flatten the remaining dimensions
