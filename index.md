@@ -40,11 +40,11 @@ print ("test_y shape: " + str(test_y.shape))
 
 ```
 
-# Reshape the training and test examples 
+#Reshape the training and test examples 
 train_x_flatten = train_x_orig.reshape(train_x_orig.shape[0], -1).T   # The "-1" makes reshape flatten the remaining dimensions
 test_x_flatten = test_x_orig.reshape(test_x_orig.shape[0], -1).T
 
-# Standardize data to have feature values between 0 and 1.
+#Standardize data to have feature values between 0 and 1.
 train_x = train_x_flatten / 255.
 test_x = test_x_flatten / 255.
 
@@ -67,13 +67,13 @@ def update_parameters(parameters, grads, learning_rate):
     ...
     return parameters
     
-### CONSTANTS DEFINING THE MODEL ####
+#CONSTANTS DEFINING THE MODEL ####
 n_x = 12288     # num_px * num_px * 3
 n_h = 7
 n_y = 1
 layers_dims = (n_x, n_h, n_y)
 
-# GRADED FUNCTION: two_layer_model
+#GRADED FUNCTION: two_layer_model
 
 def two_layer_model(X, Y, layers_dims, learning_rate=0.0075, num_iterations=3000, print_cost=False):
     """
@@ -179,10 +179,10 @@ def update_parameters(parameters, grads, learning_rate):
     ...
     return parameters
     
-### CONSTANTS ###
+#CONSTANTS#
 layers_dims = [12288, 20, 7, 5, 1] #  5-layer model
 
-# GRADED FUNCTION: n_layer_model
+#GRADED FUNCTION: n_layer_model
 
 def L_layer_model(X, Y, layers_dims, learning_rate=0.0075, num_iterations=3000, print_cost=False): #lr was 0.009
     """
